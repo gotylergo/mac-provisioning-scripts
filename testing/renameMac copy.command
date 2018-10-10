@@ -21,7 +21,7 @@ function renameComputer(){
 }
 
 ###Script
-echo "Provisioning Internet Brands Mac"
+echo "Provisioning Mac"
 echo
 echo "Renaming computer"
 echo
