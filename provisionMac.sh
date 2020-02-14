@@ -94,6 +94,8 @@ echo "The new hostname is: $hostname"
 # Join to domain and give domain admins local admin privileges
 echo "Adding Mac to domain"
 sudo dsconfigad -add $fqdn -computer $hostname -username $domain_admin -password $domain_admin_pw -mobile enable -mobileconfirm disable -useuncpath enable -groups "DOMAIN\domain admins"
+sudo dsconfigad -packetsign require
+sudo dsconfigad -packetencrypt require
 domain_admin_pw=0
 # Display login window as name and Password
 defaults write /Library/Preferences/com.apple.loginwindow SHOWFULLNAME -bool true
